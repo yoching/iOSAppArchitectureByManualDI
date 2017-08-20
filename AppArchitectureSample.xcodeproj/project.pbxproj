@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		E3CACCCB1F497AA90089D9EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CACCCA1F497AA90089D9EF /* AppDelegate.swift */; };
 		E3CACCCD1F497AA90089D9EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CACCCC1F497AA90089D9EF /* ViewController.swift */; };
-		E3CACCD01F497AA90089D9EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CACCCE1F497AA90089D9EF /* Main.storyboard */; };
 		E3CACCD21F497AA90089D9EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3CACCD11F497AA90089D9EF /* Assets.xcassets */; };
-		E3CACCD51F497AA90089D9EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3CACCD31F497AA90089D9EF /* LaunchScreen.storyboard */; };
 		E3CACCE01F497AA90089D9EF /* AppArchitectureSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CACCDF1F497AA90089D9EF /* AppArchitectureSampleTests.swift */; };
 		E3CACCEB1F497AA90089D9EF /* AppArchitectureSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CACCEA1F497AA90089D9EF /* AppArchitectureSampleUITests.swift */; };
 /* End PBXBuildFile section */
@@ -37,9 +35,7 @@
 		E3CACCC71F497AA90089D9EF /* AppArchitectureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppArchitectureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CACCCA1F497AA90089D9EF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3CACCCC1F497AA90089D9EF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E3CACCCF1F497AA90089D9EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E3CACCD11F497AA90089D9EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E3CACCD41F497AA90089D9EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3CACCD61F497AA90089D9EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3CACCDB1F497AA90089D9EF /* AppArchitectureSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppArchitectureSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CACCDF1F497AA90089D9EF /* AppArchitectureSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppArchitectureSampleTests.swift; sourceTree = "<group>"; };
@@ -74,6 +70,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E31434E91F497B7500D0063A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E3CACCCA1F497AA90089D9EF /* AppDelegate.swift */,
+				E3CACCD11F497AA90089D9EF /* Assets.xcassets */,
+				E3CACCD61F497AA90089D9EF /* Info.plist */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E31434EA1F497B7800D0063A /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E3CACCCC1F497AA90089D9EF /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E31434EB1F497B7C00D0063A /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		E3CACCBE1F497AA90089D9EF = {
 			isa = PBXGroup;
 			children = (
@@ -97,12 +118,9 @@
 		E3CACCC91F497AA90089D9EF /* AppArchitectureSample */ = {
 			isa = PBXGroup;
 			children = (
-				E3CACCCA1F497AA90089D9EF /* AppDelegate.swift */,
-				E3CACCCC1F497AA90089D9EF /* ViewController.swift */,
-				E3CACCCE1F497AA90089D9EF /* Main.storyboard */,
-				E3CACCD11F497AA90089D9EF /* Assets.xcassets */,
-				E3CACCD31F497AA90089D9EF /* LaunchScreen.storyboard */,
-				E3CACCD61F497AA90089D9EF /* Info.plist */,
+				E31434E91F497B7500D0063A /* Application */,
+				E31434EB1F497B7C00D0063A /* Components */,
+				E31434EA1F497B7800D0063A /* UI */,
 			);
 			path = AppArchitectureSample;
 			sourceTree = "<group>";
@@ -232,9 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3CACCD51F497AA90089D9EF /* LaunchScreen.storyboard in Resources */,
 				E3CACCD21F497AA90089D9EF /* Assets.xcassets in Resources */,
-				E3CACCD01F497AA90089D9EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,25 +310,6 @@
 			targetProxy = E3CACCE71F497AA90089D9EF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		E3CACCCE1F497AA90089D9EF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E3CACCCF1F497AA90089D9EF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E3CACCD31F497AA90089D9EF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E3CACCD41F497AA90089D9EF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E3CACCED1F497AA90089D9EF /* Debug */ = {
@@ -412,7 +409,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AppArchitectureSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppArchitectureSample/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yoshikuni-web.AppArchitectureSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,7 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = AppArchitectureSample/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AppArchitectureSample/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yoshikuni-web.AppArchitectureSample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -505,6 +502,7 @@
 				E3CACCF11F497AA90089D9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3CACCF21F497AA90089D9EF /* Build configuration list for PBXNativeTarget "AppArchitectureSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +511,7 @@
 				E3CACCF41F497AA90089D9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3CACCF51F497AA90089D9EF /* Build configuration list for PBXNativeTarget "AppArchitectureSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +520,7 @@
 				E3CACCF71F497AA90089D9EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
