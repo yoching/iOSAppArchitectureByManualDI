@@ -12,19 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    private var appDependencies: AppDependencies?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        window = UIWindow(frame: UIScreen.main.bounds)
-        
-        let rootVC = UIViewController()
-        rootVC.view.backgroundColor = .orange
-        window?.rootViewController = rootVC
 
-        window?.makeKeyAndVisible()
-        
+        appDependencies = SampleAppDependencies()
+        let windowCoordinator = appDependencies!.coordinatorFactory.window()
+        self.window = windowCoordinator.window
+        windowCoordinator.start()
         return true
     }
 
@@ -50,6 +45,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
 }
-
