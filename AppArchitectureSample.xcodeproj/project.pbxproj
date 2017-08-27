@@ -22,6 +22,11 @@
 		E3E23E891F51C74200CCDABD /* NavigationBCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E881F51C74200CCDABD /* NavigationBCoordinator.swift */; };
 		E3E23E8B1F51C90E00CCDABD /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E8A1F51C90E00CCDABD /* SampleService.swift */; };
 		E3E23E8D1F51C97200CCDABD /* SampleTemporaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E8C1F51C97200CCDABD /* SampleTemporaryManager.swift */; };
+		E3E23E971F52D7A500CCDABD /* FooViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E961F52D7A500CCDABD /* FooViewController.swift */; };
+		E3E23E991F52D7C200CCDABD /* FooViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E981F52D7C200CCDABD /* FooViewModel.swift */; };
+		E3E23E9B1F52D8AF00CCDABD /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */; };
+		E3E23E9D1F52DCEE00CCDABD /* FooViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E23E9C1F52DCEE00CCDABD /* FooViewController.storyboard */; };
+		E3E23E9F1F52DDDC00CCDABD /* BarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E23E9E1F52DDDC00CCDABD /* BarViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		E3E23E881F51C74200CCDABD /* NavigationBCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBCoordinator.swift; sourceTree = "<group>"; };
 		E3E23E8A1F51C90E00CCDABD /* SampleService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 		E3E23E8C1F51C97200CCDABD /* SampleTemporaryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleTemporaryManager.swift; sourceTree = "<group>"; };
+		E3E23E961F52D7A500CCDABD /* FooViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooViewController.swift; sourceTree = "<group>"; };
+		E3E23E981F52D7C200CCDABD /* FooViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooViewModel.swift; sourceTree = "<group>"; };
+		E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
+		E3E23E9C1F52DCEE00CCDABD /* FooViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FooViewController.storyboard; sourceTree = "<group>"; };
+		E3E23E9E1F52DDDC00CCDABD /* BarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +114,8 @@
 		E31434EA1F497B7800D0063A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E3E23E951F52D49F00CCDABD /* BarView */,
+				E3E23E941F52D48100CCDABD /* FooView */,
 				E3BC0D061F516024003DF2B8 /* CoordinatorFactory.swift */,
 				E3BC0D081F51A7C8003DF2B8 /* Coordinator */,
 				E3BC0D041F51601A003DF2B8 /* ViewFactory.swift */,
@@ -179,6 +191,25 @@
 				E3CACCEC1F497AA90089D9EF /* Info.plist */,
 			);
 			path = AppArchitectureSampleUITests;
+			sourceTree = "<group>";
+		};
+		E3E23E941F52D48100CCDABD /* FooView */ = {
+			isa = PBXGroup;
+			children = (
+				E3E23E9C1F52DCEE00CCDABD /* FooViewController.storyboard */,
+				E3E23E961F52D7A500CCDABD /* FooViewController.swift */,
+				E3E23E981F52D7C200CCDABD /* FooViewModel.swift */,
+			);
+			path = FooView;
+			sourceTree = "<group>";
+		};
+		E3E23E951F52D49F00CCDABD /* BarView */ = {
+			isa = PBXGroup;
+			children = (
+				E3E23E9E1F52DDDC00CCDABD /* BarViewController.storyboard */,
+				E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */,
+			);
+			path = BarView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +319,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3E23E9D1F52DCEE00CCDABD /* FooViewController.storyboard in Resources */,
+				E3E23E9F1F52DDDC00CCDABD /* BarViewController.storyboard in Resources */,
 				E3CACCD21F497AA90089D9EF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,12 +347,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3E23E851F51BDA500CCDABD /* SampleTabCoordinator.swift in Sources */,
+				E3E23E9B1F52D8AF00CCDABD /* BarViewController.swift in Sources */,
 				E3E23E8B1F51C90E00CCDABD /* SampleService.swift in Sources */,
 				E3E23E811F51B1E700CCDABD /* CoordinatorProtocols.swift in Sources */,
 				E3BC0D011F515FCA003DF2B8 /* AppDependencies.swift in Sources */,
 				E3E23E871F51BFF700CCDABD /* NavigationACoordinator.swift in Sources */,
+				E3E23E991F52D7C200CCDABD /* FooViewModel.swift in Sources */,
 				E3BC0D031F515FE9003DF2B8 /* Components.swift in Sources */,
 				E3BC0D051F51601A003DF2B8 /* ViewFactory.swift in Sources */,
+				E3E23E971F52D7A500CCDABD /* FooViewController.swift in Sources */,
 				E3BC0D071F516024003DF2B8 /* CoordinatorFactory.swift in Sources */,
 				E3E23E891F51C74200CCDABD /* NavigationBCoordinator.swift in Sources */,
 				E3E23E831F51B32E00CCDABD /* WindowCoordinator.swift in Sources */,

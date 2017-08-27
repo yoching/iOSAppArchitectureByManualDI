@@ -19,6 +19,7 @@ final class NavigationACoordinator: NavigationCoordinator {
     }
 
     func start() {
-        navigationController.pushViewController(viewFactory.viewA(), animated: false)
+        let (fooViewController, _) = viewFactory.foo()
+        navigationController.pushViewController(fooViewController, animated: false)
     }
 }

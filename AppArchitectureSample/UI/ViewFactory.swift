@@ -9,8 +9,8 @@
 import UIKit
 
 protocol ViewFactory {
-    func viewA() -> UIViewController
-    func viewB() -> UIViewController
+    func foo() -> (UIViewController, FooViewModel)
+    func bar() -> (UIViewController)
 }
 
 final class SampleViewFactory {
@@ -23,19 +23,16 @@ final class SampleViewFactory {
 }
 
 extension SampleViewFactory: ViewFactory {
-    func viewA() -> UIViewController {
-        // use components when needed
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .blue
-        viewController.title = "viewA"
-        return viewController
+    
+    func foo() -> (UIViewController, FooViewModel) {
+        let viewController = UIStoryboard(name: "FooViewController", bundle: nil).instantiateInitialViewController() as! FooViewController
+        let viewModel = FooViewModel()
+        viewController.viewModel = viewModel
+        return (viewController, viewModel)
     }
-
-    func viewB() -> UIViewController {
-        // use components when needed
-        let viewController = UIViewController()
-        viewController.view.backgroundColor = .orange
-        viewController.title = "viewB"
+    
+    func bar() -> (UIViewController) {
+        let viewController = UIStoryboard(name: "BarViewController", bundle: nil).instantiateInitialViewController() as! BarViewController
         return viewController
     }
 

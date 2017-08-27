@@ -19,6 +19,7 @@ final class NavigationBCoordinator: NavigationCoordinator {
     }
 
     func start() {
-        navigationController.pushViewController(viewFactory.viewB(), animated: false)
+        let barViewController = viewFactory.bar()
+        navigationController.pushViewController(barViewController, animated: false)
     }
 }
