@@ -27,11 +27,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lx-vO-kEb">
+                                <rect key="frame" x="154" y="374" width="66" height="30"/>
+                                <state key="normal" title="show Baz"/>
+                                <connections>
+                                    <action selector="showBuzTapped:" destination="R83-wm-LZ9" eventType="touchUpInside" id="unh-nC-kb7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="5Lx-vO-kEb" firstAttribute="centerX" secondItem="3nY-l4-gEq" secondAttribute="centerX" id="02o-GQ-bIT"/>
                             <constraint firstItem="UI6-kP-wEg" firstAttribute="centerX" secondItem="3nY-l4-gEq" secondAttribute="centerX" id="0e1-tl-GMm"/>
                             <constraint firstItem="UI6-kP-wEg" firstAttribute="centerY" secondItem="3nY-l4-gEq" secondAttribute="centerY" id="H33-fN-XpY"/>
+                            <constraint firstItem="5Lx-vO-kEb" firstAttribute="top" secondItem="UI6-kP-wEg" secondAttribute="bottom" constant="30" id="bEE-YG-mim"/>
                         </constraints>
                     </view>
                 </viewController>

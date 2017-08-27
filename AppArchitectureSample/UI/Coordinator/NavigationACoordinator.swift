@@ -19,7 +19,23 @@ final class NavigationACoordinator: NavigationCoordinator {
     }
 
     func start() {
-        let (fooViewController, _) = viewFactory.foo()
+        let (fooViewController, routing) = viewFactory.foo()
+        routing.routeSelected = { [weak self] route in
+            switch route {
+            case .baz:
+                self?.presentBaz()
+            }
+        }
+        
         navigationController.pushViewController(fooViewController, animated: false)
+    }
+    
+    private func presentBaz() {
+        let viewController = viewFactory.baz()
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    deinit {
+        print("NavigationACoordinator deinit")
     }
 }

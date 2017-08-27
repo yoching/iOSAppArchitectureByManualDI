@@ -27,6 +27,8 @@
 		E3E23E9B1F52D8AF00CCDABD /* BarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */; };
 		E3E23E9D1F52DCEE00CCDABD /* FooViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E23E9C1F52DCEE00CCDABD /* FooViewController.storyboard */; };
 		E3E23E9F1F52DDDC00CCDABD /* BarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E23E9E1F52DDDC00CCDABD /* BarViewController.storyboard */; };
+		E3E23EA21F52E27F00CCDABD /* BazViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E23EA11F52E27F00CCDABD /* BazViewController.storyboard */; };
+		E3E23EA41F52E28A00CCDABD /* BazViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E23EA31F52E28A00CCDABD /* BazViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarViewController.swift; sourceTree = "<group>"; };
 		E3E23E9C1F52DCEE00CCDABD /* FooViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FooViewController.storyboard; sourceTree = "<group>"; };
 		E3E23E9E1F52DDDC00CCDABD /* BarViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BarViewController.storyboard; sourceTree = "<group>"; };
+		E3E23EA11F52E27F00CCDABD /* BazViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BazViewController.storyboard; sourceTree = "<group>"; };
+		E3E23EA31F52E28A00CCDABD /* BazViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BazViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +118,9 @@
 		E31434EA1F497B7800D0063A /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				E3E23E951F52D49F00CCDABD /* BarView */,
 				E3E23E941F52D48100CCDABD /* FooView */,
+				E3E23E951F52D49F00CCDABD /* BarView */,
+				E3E23EA01F52E25D00CCDABD /* BazView */,
 				E3BC0D061F516024003DF2B8 /* CoordinatorFactory.swift */,
 				E3BC0D081F51A7C8003DF2B8 /* Coordinator */,
 				E3BC0D041F51601A003DF2B8 /* ViewFactory.swift */,
@@ -210,6 +215,15 @@
 				E3E23E9A1F52D8AF00CCDABD /* BarViewController.swift */,
 			);
 			path = BarView;
+			sourceTree = "<group>";
+		};
+		E3E23EA01F52E25D00CCDABD /* BazView */ = {
+			isa = PBXGroup;
+			children = (
+				E3E23EA11F52E27F00CCDABD /* BazViewController.storyboard */,
+				E3E23EA31F52E28A00CCDABD /* BazViewController.swift */,
+			);
+			path = BazView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +336,7 @@
 				E3E23E9D1F52DCEE00CCDABD /* FooViewController.storyboard in Resources */,
 				E3E23E9F1F52DDDC00CCDABD /* BarViewController.storyboard in Resources */,
 				E3CACCD21F497AA90089D9EF /* Assets.xcassets in Resources */,
+				E3E23EA21F52E27F00CCDABD /* BazViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +375,7 @@
 				E3E23E891F51C74200CCDABD /* NavigationBCoordinator.swift in Sources */,
 				E3E23E831F51B32E00CCDABD /* WindowCoordinator.swift in Sources */,
 				E3CACCCB1F497AA90089D9EF /* AppDelegate.swift in Sources */,
+				E3E23EA41F52E28A00CCDABD /* BazViewController.swift in Sources */,
 				E3E23E8D1F51C97200CCDABD /* SampleTemporaryManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

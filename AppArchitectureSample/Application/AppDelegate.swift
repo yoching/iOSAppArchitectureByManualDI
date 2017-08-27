@@ -11,15 +11,17 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
     private var appDependencies: AppDependencies?
 
+    var window: UIWindow?
+    private var windowCoordinator: WindowCoordinator?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
         appDependencies = SampleAppDependencies()
-        let windowCoordinator = appDependencies!.coordinatorFactory.window()
-        self.window = windowCoordinator.window
-        windowCoordinator.start()
+        windowCoordinator = appDependencies!.coordinatorFactory.window()
+        self.window = windowCoordinator!.window
+        windowCoordinator!.start()
         return true
     }
 

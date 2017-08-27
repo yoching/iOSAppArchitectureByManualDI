@@ -9,8 +9,9 @@
 import UIKit
 
 protocol ViewFactory {
-    func foo() -> (UIViewController, FooViewModel)
+    func foo() -> (UIViewController, FooViewRouting)
     func bar() -> (UIViewController)
+    func baz() -> (UIViewController)
 }
 
 final class SampleViewFactory {
@@ -24,7 +25,7 @@ final class SampleViewFactory {
 
 extension SampleViewFactory: ViewFactory {
     
-    func foo() -> (UIViewController, FooViewModel) {
+    func foo() -> (UIViewController, FooViewRouting) {
         let viewController = UIStoryboard(name: "FooViewController", bundle: nil).instantiateInitialViewController() as! FooViewController
         let viewModel = FooViewModel()
         viewController.viewModel = viewModel
@@ -36,4 +37,8 @@ extension SampleViewFactory: ViewFactory {
         return viewController
     }
 
+    func baz() -> (UIViewController) {
+        let viewController = UIStoryboard(name: "BazViewController", bundle: nil).instantiateInitialViewController() as! BazViewController
+        return viewController
+    }
 }

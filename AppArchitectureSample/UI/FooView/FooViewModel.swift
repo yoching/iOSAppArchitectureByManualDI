@@ -9,13 +9,26 @@
 import Foundation
 
 protocol FooViewModeling {
-    
+    func showBuzTapped()
 }
 
-final class FooViewModel {
-    
+enum FooViewRoute {
+    case baz
 }
 
-extension FooViewModel: FooViewModeling {
-    
+protocol FooViewRouting: class {
+    var routeSelected: ((FooViewRoute) -> Void)? { get set }
 }
+
+final class FooViewModel: FooViewModeling, FooViewRouting {
+    var routeSelected: ((FooViewRoute) -> Void)?
+    
+    init() {
+        
+    }
+    
+    func showBuzTapped() {
+        routeSelected?(.baz)
+    }
+}
+
