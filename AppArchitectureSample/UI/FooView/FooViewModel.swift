@@ -22,13 +22,12 @@ protocol FooViewRouting: class {
 
 final class FooViewModel: FooViewModeling, FooViewRouting {
     var routeSelected: ((FooViewRoute) -> Void)?
-    
+
     init() {
-        
+
     }
-    
+
     func showBuzTapped() {
         routeSelected?(.baz)
     }
 }
-

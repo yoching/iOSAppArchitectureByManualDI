@@ -23,8 +23,5 @@ final class SampleTabCoordinator: TabCoordinator {
         tabBarController.setViewControllers(childCoordinators.map { $0.presenter }, animated: false)
         childCoordinators.forEach { $0.start() }
     }
-    
-    deinit {
-        print("SampleTabCoordinator deinit")
-    }
+
 }

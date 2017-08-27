@@ -107,10 +107,10 @@
 		E31434E91F497B7500D0063A /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC0D001F515FCA003DF2B8 /* AppDependencies.swift */,
 				E3CACCCA1F497AA90089D9EF /* AppDelegate.swift */,
 				E3CACCD11F497AA90089D9EF /* Assets.xcassets */,
 				E3CACCD61F497AA90089D9EF /* Info.plist */,
-				E3BC0D001F515FCA003DF2B8 /* AppDependencies.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -118,12 +118,12 @@
 		E31434EA1F497B7800D0063A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				E3BC0D061F516024003DF2B8 /* CoordinatorFactory.swift */,
+				E3BC0D041F51601A003DF2B8 /* ViewFactory.swift */,
+				E3BC0D081F51A7C8003DF2B8 /* Coordinator */,
 				E3E23E941F52D48100CCDABD /* FooView */,
 				E3E23E951F52D49F00CCDABD /* BarView */,
 				E3E23EA01F52E25D00CCDABD /* BazView */,
-				E3BC0D061F516024003DF2B8 /* CoordinatorFactory.swift */,
-				E3BC0D081F51A7C8003DF2B8 /* Coordinator */,
-				E3BC0D041F51601A003DF2B8 /* ViewFactory.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";

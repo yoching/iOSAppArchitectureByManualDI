@@ -10,7 +10,7 @@ import UIKit
 
 final class FooViewController: UIViewController {
     var viewModel: FooViewModeling!
-    
+
     @IBAction func showBuzTapped(_ sender: Any) {
         viewModel.showBuzTapped()
     }

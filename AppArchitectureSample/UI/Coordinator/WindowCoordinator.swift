@@ -22,8 +22,5 @@ final class WindowCoordinator {
         window.makeKeyAndVisible()
         rootCoordinator.start()
     }
-    
-    deinit {
-        print("WindowCoordinator deinit")
-    }
+
 }

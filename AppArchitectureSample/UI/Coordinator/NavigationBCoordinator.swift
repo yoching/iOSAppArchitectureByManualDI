@@ -22,4 +22,5 @@ final class NavigationBCoordinator: NavigationCoordinator {
         let barViewController = viewFactory.bar()
         navigationController.pushViewController(barViewController, animated: false)
     }
+
 }

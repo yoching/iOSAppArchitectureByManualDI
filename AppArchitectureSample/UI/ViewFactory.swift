@@ -24,14 +24,14 @@ final class SampleViewFactory {
 }
 
 extension SampleViewFactory: ViewFactory {
-    
+
     func foo() -> (UIViewController, FooViewRouting) {
         let viewController = UIStoryboard(name: "FooViewController", bundle: nil).instantiateInitialViewController() as! FooViewController
         let viewModel = FooViewModel()
         viewController.viewModel = viewModel
         return (viewController, viewModel)
     }
-    
+
     func bar() -> (UIViewController) {
         let viewController = UIStoryboard(name: "BarViewController", bundle: nil).instantiateInitialViewController() as! BarViewController
         return viewController

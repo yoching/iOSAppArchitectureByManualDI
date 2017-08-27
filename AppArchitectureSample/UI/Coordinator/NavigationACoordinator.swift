@@ -26,16 +26,13 @@ final class NavigationACoordinator: NavigationCoordinator {
                 self?.presentBaz()
             }
         }
-        
+
         navigationController.pushViewController(fooViewController, animated: false)
     }
-    
+
     private func presentBaz() {
         let viewController = viewFactory.baz()
         navigationController.pushViewController(viewController, animated: true)
     }
-    
-    deinit {
-        print("NavigationACoordinator deinit")
-    }
+
 }
