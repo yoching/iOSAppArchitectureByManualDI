@@ -19,8 +19,20 @@ final class NavigationBCoordinator: NavigationCoordinator {
     }
 
     func start() {
-        let barViewController = viewFactory.bar()
+        let (barViewController, routing) = viewFactory.bar()
+        routing.routeSelected = { [weak self] route in
+            switch route {
+            case .baz:
+                self?.presentBaz()
+            }
+        }
+
         navigationController.pushViewController(barViewController, animated: false)
+    }
+
+    private func presentBaz() {
+        let viewController = viewFactory.baz()
+        navigationController.pushViewController(viewController, animated: true)
     }
 
 }

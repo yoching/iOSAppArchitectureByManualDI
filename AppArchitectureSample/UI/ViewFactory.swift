@@ -10,7 +10,7 @@ import UIKit
 
 protocol ViewFactory {
     func foo() -> (UIViewController, FooViewRouting)
-    func bar() -> (UIViewController)
+    func bar() -> (UIViewController, BarViewRouting)
     func baz() -> (UIViewController)
 }
 
@@ -25,6 +25,7 @@ final class SampleViewFactory {
 
 extension SampleViewFactory: ViewFactory {
 
+    // MVVM sample
     func foo() -> (UIViewController, FooViewRouting) {
         let viewController = UIStoryboard(name: "FooViewController", bundle: nil).instantiateInitialViewController() as! FooViewController
         let viewModel = FooViewModel()
@@ -32,9 +33,10 @@ extension SampleViewFactory: ViewFactory {
         return (viewController, viewModel)
     }
 
-    func bar() -> (UIViewController) {
+    // MVC sample
+    func bar() -> (UIViewController, BarViewRouting) {
         let viewController = UIStoryboard(name: "BarViewController", bundle: nil).instantiateInitialViewController() as! BarViewController
-        return viewController
+        return (viewController, viewController)
     }
 
     func baz() -> (UIViewController) {

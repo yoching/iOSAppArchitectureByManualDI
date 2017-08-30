@@ -8,6 +8,18 @@
 
 import UIKit
 
-final class BarViewController: UIViewController {
+enum BarViewRoute {
+    case baz
+}
 
+protocol BarViewRouting: class {
+    var routeSelected: ((BarViewRoute) -> Void)? { get set }
+}
+
+final class BarViewController: UIViewController, BarViewRouting {
+    var routeSelected: ((BarViewRoute) -> Void)?
+
+    @IBAction func showBazTapped(_ sender: Any) {
+        routeSelected?(.baz)
+    }
 }

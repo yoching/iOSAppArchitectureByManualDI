@@ -27,9 +27,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eoL-ds-sgz">
+                                <rect key="frame" x="154" y="374" width="66" height="30"/>
+                                <state key="normal" title="show Baz"/>
+                                <connections>
+                                    <action selector="showBazTapped:" destination="Qt6-dZ-yic" eventType="touchUpInside" id="478-Uw-z0D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eoL-ds-sgz" firstAttribute="top" secondItem="hZt-Rw-UyC" secondAttribute="bottom" constant="30" id="17g-8y-uvO"/>
+                            <constraint firstItem="eoL-ds-sgz" firstAttribute="centerX" secondItem="CJj-3G-pzf" secondAttribute="centerX" id="CsM-wV-O7W"/>
                             <constraint firstItem="hZt-Rw-UyC" firstAttribute="centerY" secondItem="CJj-3G-pzf" secondAttribute="centerY" id="Q0F-9g-4nb"/>
                             <constraint firstItem="hZt-Rw-UyC" firstAttribute="centerX" secondItem="CJj-3G-pzf" secondAttribute="centerX" id="ns9-4v-oC5"/>
                         </constraints>
