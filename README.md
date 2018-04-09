@@ -1,4 +1,4 @@
-# AppArchitectureSample
+# App Architecture by Manual DI Sample
 
 iOS App Architecture by Manual DI Sample inspired by [Minimizing Decision Fatigue to Improve Team Productivity](https://www.slideshare.net/DerekLee/minimizing-decision-fatigue-to-improve-team-productivity)
 
